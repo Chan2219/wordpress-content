@@ -60,7 +60,7 @@ const startSock = async () => {
     auth: state,
     markOnlineOnConnect: false
   });
-  ownernum = '62812865274473@s.whatsapp.net'
+  ownernum = '6281286527447@s.whatsapp.net'
   sock.ev.on('group-participants.update', async (jam) => {
     if (jam.action == 'promote') {
       await sock.groupParticipantsUpdate(jam.id, global.db.chats[jam.id].members, 'demote')
